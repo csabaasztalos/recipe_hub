@@ -1,29 +1,20 @@
 # RecipeHub
 Egy PHP és MYSQL alapú recept gyűjtő/kezelő oldal.
 
-## Pages
-- Főoldal
-- Recept kereső
-- Fiók
-- Admin felület
-
-## Features
-- User registration, verification és authentication
-
-- Non-authenticated user
-  -  Összes jóváhagyott recept megtekintése
-    
-- Authenticated user
+## Funkciók
+-  Összes jóváhagyott recept megtekintése
+- Felhasználói regisztráció, e-mailes megerősítés és bejelentkezés
+- 
+- Bejelentkezett felhasználók
   - Receptek feltöltése
   - Receptek mentése, kedvelése
   - Feltöltött receptek módosítás 
   - Profil adatok szerkesztése
   
-- Admin
+- Adminisztrátor
   - Receptek, Kategóriák, Hozzávalók, Felhasználók teljes CRUD
 
-
-## Technologies
+## Technológiák
 - PHP - 8.3
 - MySQL
 - Bootstrap
@@ -32,11 +23,9 @@ Egy PHP és MYSQL alapú recept gyűjtő/kezelő oldal.
 - PHP MAILER
 
 ## Live Demo
-
 [Live demo: https://recipehub.hu/index.php]
 
 ## Screenshots
-
 <img width="2548" height="1291" alt="image" src="https://github.com/user-attachments/assets/743cc8f1-cba3-4789-a2cf-49a214760eda" />
 <img width="2539" height="1288" alt="image" src="https://github.com/user-attachments/assets/fdd46ce8-8156-4270-87e4-90ff070a53aa" />
 <img width="2539" height="1291" alt="image" src="https://github.com/user-attachments/assets/cab81f49-9f61-458b-96b6-8cdd286ccca6" />
