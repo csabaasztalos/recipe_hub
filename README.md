@@ -4,7 +4,7 @@ Egy PHP és MYSQL alapú recept gyűjtő/kezelő oldal.
 ## Funkciók
 -  Összes jóváhagyott recept megtekintése
 - Felhasználói regisztráció, e-mailes megerősítés és bejelentkezés
-- 
+  
 - Bejelentkezett felhasználók
   - Receptek feltöltése
   - Receptek mentése, kedvelése
