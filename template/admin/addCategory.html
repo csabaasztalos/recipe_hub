@@ -1,0 +1,36 @@
+<div class="modal fade" id="addCategoryModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="bi bi-plus-circle"></i>%!NEWCATEGORY!%</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form id="addCategoryForm" method="post">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label" for="categoryName">%!CATEGORYNAME!%</label>
+                        <input type="text" name="categoryName" class="form-control" required id="categoryName"
+                            placeholder="" value="%!CATNAME!%">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="userid">%!USERID!%</label>
+                        <input id="userid" type="number" name="userid" class="form-control" required value="%!USERIDVALUE!%" min="1">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="statuses">%!STATUS!%</label>
+                        <select name="status" class="form-select" id="statuses">
+                            %!STATUSOPTIONS!%
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <p class="errorMessage">%!NEWCATEGORYRESULT!%</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success confirm-btn" name="newCategory" data-confirm="Biztosan létrehozod az elemet?">%!ADDNEWCATEGORY!%</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">%!CANCEL!%</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="modal fade" id="editUserModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="bi bi-pencil"></i> %!EDITUSER!%</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form id="editUserForm" method="post">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label" for="userName">%!USERNAME!%</label>
+                        <input type="text" name="userName" class="form-control" id="userName">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="userEmail">%!EMAIL!%</label>
+                        <input type="email" name="userEmail" class="form-control"  id="userEmail">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="permission">%!PERMISSIONLVL!%</label>
+                        <select name="permission" class="form-select" id="permission">
+                            %!PERMISSIONOPTIONS!%
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="status">%!STATUS!%</label>
+                        <select name="status" class="form-select" id="status">
+                            %!STATUSOPTIONS!%
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <p class="errorMessage">%!EDITRESULTS!%</p>
+                    </div>
+                    <input type="hidden" value="" name="userId" id="userId">
+                    <input type="hidden" value="" name="errors" id="errors" 
+                    data-user-id="%!ERRORID!%" data-user-name="%!ERRORUSERNAME!%" data-user-email="%!ERROREMAIL!%" data-user-permission="%!ERRORPERMISSION!%">
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" name="newPass">%!NEWPASS!%</button>
+                    <button type="submit" class="btn btn-success confirm-btn" name="updateUser" data-confirm="Biztosan módosítod a felhasználót?">%!EDITUSER!%</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">%!CANCEL!%</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

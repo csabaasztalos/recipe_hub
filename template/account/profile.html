@@ -1,0 +1,41 @@
+<div class="accountPageContent">
+  <div class="accountContent">
+    <div class="sideMenu">
+      %!SIDEMENU!%
+    </div>
+
+    <div class="menuContent">
+        <h3>%!TITLE!%</h3>
+        <div id="errorMessages">%!UPLOADRESULT!%</div>
+        <div id="successMessages">%!SUCCESSMESSAGET!%</div>
+        <div id="profile-Data">
+        <form method="post" clas="profile-form">
+            <div class="form-group">
+                <label for="email">%!MODIFYEMAIL!%</label>
+                <input id="email" type="email" class="form-control" value="%!USEREMAIL!%" name="email">
+                <input type="submit" class="btn btn-primary" value="%!SAVE!%" name="save">
+            </div>
+        </form>
+        <form method="post" clas="profile-form">
+            <div class="form-group">
+                <label for="name">%!MODIFYNAME!%</label>
+            <input id="name" type="text" class="form-control" value="%!USERNAME!%" name="name">
+            <input type="submit" class="btn btn-primary" value="%!SAVE!%" name="save">
+            </div>
+        </form>
+        <form method="post" clas="profile-form">
+            <div class="form-group">
+                <label for="password">%!NEWPASS!%</label>
+                <input id="password" type="password" class="form-control" placeholder="Új jelszó" name="newPass">
+                <label for="password">%!OLDPASS!%</label>
+                <input id="old-password" type="password" class="form-control" placeholder="Régi jelszó" name="oldPass">
+                <small id="pass-help">%!PASSHELP!%</small>
+                <small id="pass-help">%!FORGOTPASS!%<a href="index.php?p=forgot-password">%!FORGOTPASSLINK!%</a></small>
+                <input type="submit" class="btn btn-primary" value="%!SAVE!%" name="save">
+            </div>
+        </form> 
+        </div>
+    </div>
+  </div>
+</div>
+</div>

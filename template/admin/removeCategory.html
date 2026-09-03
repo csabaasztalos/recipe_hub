@@ -1,0 +1,37 @@
+<div class="modal fade remove-modal" id="removeCategoryModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="bi bi-file-earmark-x-fill"></i>%!REMOVERECIPECATEGORY!%</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form id="removeCategoryForm" method="post">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label mb-0" for="removeRecipeSearch">%!RECIPESSEARCH!%</label>
+                        <input type="text" class="form-control form-control-sm recipe-search" name="removeRecipeSearch" id="removeRecipeSearch"
+                            placeholder="Keresés..." value="%!RECIPENAME!%">
+                        <ul required class="recipe-dropdown-list">
+                            %!RECIPELIST!%
+                        </ul>
+                        <input type="hidden" name="recipe_id" class="recipe-value" value="%!RECIPEID!%">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="removeCategory">%!ASSIGNEDCATEGORIES!%</label>
+                        <select class="form-select item-select" id="removeCategory" name="category_id" required>
+                            %!ASSIGNEDCATEGORYOPTIONS!%
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                    <p class="errorMessage">%!RECIPECATEGORYREMOVERESULT!%</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger confirm-btn"
+                        name="removeCategoryRecipe" data-confirm="Biztosan el szeretnéd távolítani az elemet a receptből?">%!REMOVE!%</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">%!CANCEL!%</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

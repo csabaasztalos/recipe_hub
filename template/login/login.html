@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>%!TITLE!%</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/main/style.css">
+    <link rel="icon" href="/content/images/favicon.png">
+</head>
+
+<body>
+    <div id="loginContent">
+    <div class="loginContainer">
+        <div class="leftSide">
+            <h1>%!WELCOME!%</h1>
+            <p>%!WELCOMETEXT!%</p>
+            <a class="registerBtn" href="index.php?p=register">%!REGISTERBTN!%</a>
+        </div>
+        <div class="rightSide">
+            <h1 class="loginHeader">%!LOGINHEADER!%</h1>
+            <form class="loginForm" method="post">
+                <div class="input-group">
+                    <input type="email" id="user" name="email" placeholder="Email cím">
+                </div>
+                <div class="input-group">
+                    <input type="password" id="pass" name="pass" required placeholder="Jelszó" >
+                    <div class="showPassword"><input type="checkbox" id="show"><span id="text">Megjelenítés</span></div>
+                </div>
+                <button type="submit" class="loginBtn" name="login">%!LOGINBTN!%</button>
+            </form>
+            <p class="loginResult">%!RESULT!%</p>
+        </div>
+    </div>
+    </div>
+    <script src="/js/login/showPassword.js"></script>
+</body>
+
+</html>

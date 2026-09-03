@@ -1,0 +1,94 @@
+
+    <div class="container mt-1">
+    <div id="actionRow">
+    <h1 class="h4 mb-3">%!TITLE!%</h1>
+        <div class="d-flex flex-wrap gap-2 mb-2">
+            <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#addCategoryModal"><i
+                    class="bi bi-plus-circle"></i> %!NEW!%</button>
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#assignCategoryModal"><i
+                    class="bi bi-link"></i> %!ASSIGN!%</button>
+                    <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#removeCategoryModal"><i
+                    class="bi bi-file-earmark-x-fill"></i> %!REMOVE!%</button>
+            <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#importAPIModal"><i
+                    class="bi bi-cloud-download"></i> %!API!%</button>
+            <form method="post">
+                <button type="submit" name="bulkDelete" class="btn btn-danger btn-sm confirm-btn" data-confirm = "Biztos törlöd a kategóriákat?"><i class="bi bi-trash-fill"></i>%!DELETESELECTED!%</button>
+            </form>
+        </div>
+        </div>
+    
+        <div class="card" id="mainTable">
+        
+            <div class="card-body">
+                <form class="row align-items-end mb-2" id="filterForm" method="get" autocomplete="off">
+                    <input type="hidden" name="p" value="manage-categories">
+                    <div class="col-auto">
+                        <label for="statusFilter" class="form-label mb-0">%!FILTERSTATUS!%</label>
+                        <select class="form-select form-select-sm" name="status" id="statusFilter">
+                            <option value="">%!ALLOPTIONS!%</option>
+                            %!STATUSOPTIONS!%
+                        </select>
+                    </div>
+
+                    <div class="col-auto">
+                        <label for="dateFrom" class="form-label mb-0">%!FILTERFROMDATE!%</label>
+                        <input type="date" class="form-control form-control-sm" name="date_from" id="dateFrom"
+                            value="%!DATEFROM!%">
+                    </div>
+                    <div class="col-auto">
+                        <label for="dateTo" class="form-label mb-0">%!FILTERTODATE!%</label>
+                        <input type="date" class="form-control form-control-sm" name="date_to" id="dateTo"
+                            value="%!DATETO!%">
+                    </div>
+
+                    <div class="col">
+                        <label for="searchBar" class="form-label mb-0">%!FILTERSEARCH!%</label>
+                        <input type="text" class="form-control form-control-sm" name="search" id="searchBar"
+                            placeholder="Kategória neve..." value="%!SEARCH!%">
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-sm btn-primary w-100"
+                            name="filter">%!FILTERBUTTON!%</button>
+                    </div>
+                    <div class="col-auto">
+                        <a href="index.php?p=manage-categories"
+                            class="btn btn-sm btn-secondary w-100">%!RESETFILTER!%</a>
+                    </div>
+                </form>
+
+                <div class="card desktopTable">
+                    <div class="table-scroll-container">
+                        <table class="table table-striped mb-0 table-hover" id="recipesTable">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th><input type="checkbox" name="check-all" class="check-all">%!ID!%</th>
+                                    <th>%!TABLETITLE!%</th>
+                                    <th>%!USERID!%</th>
+                                    <th>%!UPLOADEDAT!%</th>
+                                    <th>%!STATUS!%</th>
+                                    <th class="text-end">%!ACTIONS!%</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tableBody">
+                                %!CATEGORYLIST!%
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="mobileTable">
+                    <div class="tableCards">
+                        %!MOBILECATEGORIES!%
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+%!ADDCATEGORYMODAL!%
+%!ASSIGNCATEGORYMODAL!%
+%!REMOVECATEGORYMODAL!%
+%!IMORTAPIMODAL!%
+%!EDITCATEGORYMODAL!%
+%!ERRORMODAL!%
+
+

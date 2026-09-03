@@ -1,0 +1,156 @@
+<div class="accountPageContent">
+  <div class="accountContent">
+    <div class="sideMenu">
+      %!SIDEMENU!%
+    </div>
+
+    <div class="menuContent">
+      <div id="uploadFormDiv">
+        <form method="post" enctype="multipart/form-data" id="editForm">
+          <div id="formTitle">
+            <h3>%!UPLOADRECIPE!%</h3>
+          </div>
+          <div id="errorMessages">%!UPLOADRESULT!%</div>
+          <div class="form-group">
+            <h4><b>%!RECIPETITLE!%</b></h4>
+            <input id="recipeTitle" class="form-control" name="recipeTitle" type="text" required
+              placeholder="ide írd be a recept címét" maxlength="64" value="%!RECIPETITLEVALUE!%">
+          </div>
+
+          <div class="form-group">
+            <h4><b>%!SERVINGSIZE!%</b></h4>
+            <input id="servings" class="form-control" name="servings" type="number" min="1" max="50" required
+              placeholder="Hány főre szól a recept?" value="%!SERVINGSVALUE!%">
+              <small class="form-text text-muted">%!SERVINGTEXT!%</small>
+          </div>
+
+          <div class="form-group">
+            <h4>%!INGREDIENTS!%</h4>
+            <p><small>%!INGREDIENTTEXT!%</small></p>
+            <div id="ingredientsList">
+              %!INGREDIENTLIST!%
+            </div>
+            <button type="button" id="addIngredient" class="btn btn-primary wideButton"
+                    title="Hozzávaló hozzáadása">%!ADDINGREDIENT!%</button>
+          </div>
+
+          <div class="form-group">
+            <h4>%!SHORTDESC!%</h4>
+            <textarea id="smallDescription" name="smallDescription" class="form-control" required type="text"
+              minlength="10" maxlength="300" value="%!SHORTDESCVALUE!%">%!SHORTDESCVALUE!%</textarea>
+          </div>
+
+          <div class="form-group">
+            <h4>%!INSTRUCTIONS!%</h4>
+            <p><small>%!INSTRUCTIONTEXT!%</small></p>
+            %!INSTRUCTIONLIST!%
+            <button type="button" id="addInsturction" class="btn btn-primary wideButton"
+              title="Lépés hozzáadása">%!NEWINSTURCTION!%</button>
+          </div>
+
+          <div class="form-group">
+            <div class="category" id="category">
+              <h4>%!CATEGORIES!%</h4>
+              <p><small>%!CATEGORYTEXT!%</small></p>
+
+              <select id="categories" name="categories" class="form-control">
+                <option value="">%!DEAFULTCATEGORYOPTION!%</option>
+                %!CATEGORYLIST!%
+              </select>
+
+              <div id="selectedCategories" class="mt-2">
+                <div id="categoryTags" class="categoryTags">
+                  %!SELECTEDCATEGORIES!%
+                </div>
+              </div>
+
+              <button type="button" id="addCategory" class="btn btn-secondary wideButton mt-2"
+                title="Kategória hozzáadása">%!ADDCATEGORY!%</button>
+
+              <input type="hidden" id="selectedCategoryIds" name="selectedCategoryIds" value="%!SELECTEDCATEGORYIDSVALUE!%" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <h4>%!TAGS!%</h4>
+            <p><small>%!TAGSTEXT!%</small></p>
+
+           <label for="difficulity"><b>%!DIFFLABEL!%</b></label>
+            <select id="difficulity" required name="tags[DIFFICULTY]" class="form-select">
+              <option value="">%!DEFAULTTAGOPTION!%</option>
+              %!DIFTAGS!%
+            </select>
+            <label for="time"><b>%!TIMELABEL!%</b></label>
+            <select id="time" required name="tags[TIME]" class="form-select">
+              <option value="">%!DEFAULTTAGOPTION!%</option>
+              %!TIMETAGS!%
+            </select>
+            <label for="budget"><b>%!BUDGETLABEL!%</b></label>
+            <select id="budget" required name="tags[BUDGET]" class="form-select">
+              <option value="">%!DEFAULTTAGOPTION!%</option>
+              %!BUDGETTAGS!%
+            </select>
+            <label for="occasion"><b>%!OCCLABEL!%</b></label>
+            <select id="occasion" required name="tags[OCCASION]" class="form-select">
+              <option value="">%!DEFAULTTAGOPTION!%</option>
+              %!OCCTAGS!%
+            </select>
+            <label for="method"><b>%!METHODLABEL!%</b></label>
+            <select id="method" required name="tags[METHOD]" class="form-select">
+              <option value="">%!DEFAULTTAGOPTION!%</option>
+              %!METHODTAGS!%
+            </select>
+            <label for="style"><b>%!STYLELABEL!%</b></label>
+            <select id="style" required name="tags[STYLE]" class="form-select">
+              <option value="">%!DEFAULTTAGOPTION!%</option>
+              %!STYLETAGS!%
+            </select>
+
+            <div id="selectedTags" class="mt-2">
+              <div id="tagTags" class="categoryTags">
+              </div>
+            </div>
+
+            <input type="hidden" id="selectedTagIds" name="selectedTagIds" value="">
+          </div>
+
+          <div class="form-group">
+            <h4>Jelenlegi főkép</h4>
+            <div class="existing-images-container">
+              %!EXISTINGMAINIMAGE!%
+            </div>
+            <h4>%!MAINIMAGE!%</h4>
+            <div class="uploadBox" id="singleUpload" tabindex="0">
+              <p>%!MAINIMAGETEXT!%</p>
+              <input type="file" id="imageSingle" class="visually-hidden-file" name="mainImage">
+            </div>
+            <div class="previewContainer" id="singlePreview"></div>
+          </div>
+
+          <div class="form-group">
+            <h4>Jelenlegi extra képek</h4>
+            <div class="existing-images-container">
+              %!EXISTINGEXTRAIMAGES!%
+            </div>
+            <h4>%!EXTRAIMAGES!%</h4>
+            <div class="uploadBox" id="multiUpload">
+              <p>%!EXTRAIMAGESTEXT!%</p>
+              <input type="file" id="imageMulti" multiple class="visually-hidden-file" name="images[]">
+            </div>
+            <div class="previewContainer" id="multiPreview"></div>
+            
+            <input type="hidden" id="originalMainImage" name="originalMainImage" value="%!ORIGINALMAINIMAGE!%">
+            <input type="hidden" id="originalExtraImages" name="originalExtraImages" value="%!ORIGINALEXTRAIMAGES!%">
+            <input type="hidden" id="removedMainImage" name="removedMainImage" value="">
+            <input type="hidden" id="removedExtraImages" name="removedExtraImages" value="">
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-success wideButton my-3" type="submit" name="updateRecipe">%!SAVE!%</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

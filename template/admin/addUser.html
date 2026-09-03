@@ -1,0 +1,37 @@
+<div class="modal fade" id="addUserModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="bi bi-plus-circle"></i>%!NEWUSER!%</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form id="addUserForm" method="post">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label" for="userName">%!USERNAME!%</label>
+                        <input type="text" name="userName" class="form-control" required id="userName"
+                            placeholder="Felhasználó neve..." value="%!USERNAMEVALUE!%">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="userEmail">%!EMAIL!%</label>
+                        <input type="email" name="userEmail" class="form-control" required id="userEmail"
+                            placeholder="Felhasználó email címe..." value="%!USEREMAILVALUE!%">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="permisson">%!PERMISSIONLVL!%</label>
+                        <select name="permisson" class="form-select" id="permisson" value="%!PERMISSIONVALUE!%">
+                            %!PERMISSIONOPTIONS!%
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <p class="errorMessage">%!USERRESULT!%</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success confirm-btn" name="newUser" data-confirm="Biztosan létrehozod a felhasználót?">%!ADDNEWUSER!%</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">%!CANCEL!%</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

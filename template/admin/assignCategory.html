@@ -1,0 +1,37 @@
+<div class="modal fade" id="assignCategoryModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="bi bi-link"></i>%!ADDRECIPECATEGORY!%</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form id="assignCategoryForm" method="post">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label mb-0" for="recipeSearch">%!RECIPESSEARCH!%</label>
+                        <input type="text" class="form-control form-control-sm recipe-search" name="recipeSearch" id="recipeSearch"
+                            placeholder="Keresés..." value="%!RECIPENAME!%">
+                        <ul required class="recipe-dropdown-list">
+                            %!RECIPELIST!%
+                        </ul>
+                        <input type="hidden" name="recipe_id" class="recipe-value" value="%!RECIPEID!%">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="category_id">%!CATEGORY!%</label>
+                        <select class="form-select item-select" name="category_id" required>
+                            %!CHOOSECATEGORY!%
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <p class="errorMessage">%!RECIPECATEGORYRESULT!%</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary confirm-btn"
+                        name="addCategoryRecipe" data-confirm="Biztos hozzárendeled a kategóriát?">%!ADDNEWRECIPECATEGORY!%</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">%!CANCEL!%</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

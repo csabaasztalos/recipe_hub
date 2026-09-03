@@ -1,0 +1,42 @@
+<div class="modal fade" id="assignIngModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="bi bi-link"></i>%!ADDRECIPECATEGORY!%</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form id="assignCategoryForm" method="post">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label mb-0" for="recipeSearch">%!RECIPESSEARCH!%</label>
+                        <input type="text" class="form-control form-control-sm recipe-search" name="recipeSearch" id="recipeSearch"
+                            placeholder="Keresés..." value="%!RECIPENAME!%">
+                        <ul required class="recipe-dropdown-list">
+                            %!RECIPELIST!%
+                        </ul>
+                        <input type="hidden" name="recipe_id" class="recipe-value" value="%!RECIPEID!%" id="recipe_id">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="category_id">%!CATEGORY!%</label>
+                        <select class="form-select item-select" name="category_id" required id="category_id">
+                            %!CHOOSECATEGORY!%
+                        </select>
+                    </div>
+                    <div class="mb-3 ingredientList">
+                        <label class="form-label" for="userid">%!QTYANDUNIT!%</label>
+                        <input id="ingredientQTY" type="number" name="ingredients[qty]" class="form-control" required value="%!QTYVALUE!%" min="1">
+                        <input id="ingredientUnit" type="text" name="ingredients[unit]" class="form-control" required placeholder="mértékegység" value="%!UNITVALUE!%">
+                    </div>
+                    <div class="mb-3">
+                        <p class="errorMessage">%!RECIPECATEGORYRESULT!%</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary confirm-btn"
+                        name="addCategoryRecipe" data-confirm="Biztosan hozzárendeled az elemet?">%!ADDNEWRECIPECATEGORY!%</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">%!CANCEL!%</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

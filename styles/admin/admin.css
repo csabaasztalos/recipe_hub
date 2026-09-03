@@ -1,0 +1,276 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: #102a43;
+    color: #fff;
+    height: 50px;
+}
+
+.navbar a {
+    color: #fff;
+}
+
+.sidebar {
+    min-width: 10vw;
+    background: #274d70;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.sidebar a {
+    color: #ccc;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.sidebar a i {
+    margin-right: 10px;
+}
+
+.sidebar a:hover {
+    background: #132536;
+    color: #fff;
+}
+.sidebar a.active {
+    background: #183c5f;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: #f8f9fa;
+}
+
+.dashboard {
+    width: 80vw;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.dashboard-title{
+    background: #f8f9fa;
+}
+
+.mobileTable {
+    display: none;
+}
+
+.desktopTable {
+    display: block;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: reverse;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.lists .card-body {
+    max-height: 300px !important;
+    overflow-y: auto !important;
+}
+
+.charts {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-body {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+#categoryChart, #recipesOverTimeChart {
+    margin: 0 auto;
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+.chart-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+th {
+    font-size: small;
+}
+
+.table-scroll tbody {
+    display: block;
+    max-height: 300px;
+    overflow-y: auto;
+}
+.table-scroll tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.recipe-dropdown-list {
+    margin: 4px 0 0;
+    padding: 0;
+    list-style: none;
+    border-radius: 6px;
+    background: white;
+    max-height: 180px;
+    overflow-y: auto;
+    display: none;
+}
+
+.recipe-dropdown-list li {
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.recipe-dropdown-list li:hover {
+    background: #f0f0f0;
+}
+
+.previewTableToolBar {
+    display: flex;
+    flex-direction: row;
+}
+
+#importResult {
+    color: red;
+}
+
+#editRecipeModal {
+    max-height: 85vh;
+}
+
+.table-scroll-container {
+    height: 70vh;
+    overflow-y: scroll;
+    overflow-x: auto;
+    position: relative;
+}
+
+.table-scroll-container table {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.table-scroll-container thead th {
+    position: sticky;
+    top: 0;
+    background-color: #343a40;
+    z-index: 10;
+}
+
+.main > .container {
+    width: 100%;
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#mainTable, #actionRow {
+    width: 80vw;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dashboard-mid-row {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.errorMessage {
+    color: red;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+@media (max-width: 991.98px) {
+
+    .mobileTable {
+        display: block;
+        width: 100%;
+    }
+
+    .tableCards{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card-group {
+        width: 90%;
+        overflow-x: auto;
+    }
+
+    .recip-card {
+        max-width: 90vw;
+    }
+
+    .desktopTable {
+        display: none;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: reverse;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 50px;
+        left: -250px;
+        width: 250px;
+        height: 100vh;
+        z-index: 1050;
+
+        transition: left 0.3s ease;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .chart-container {
+        height: 200px;
+    }
+
+}

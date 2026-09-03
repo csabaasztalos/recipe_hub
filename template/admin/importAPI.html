@@ -1,0 +1,46 @@
+<div class="modal fade" id="importAPIModal" tabindex="-1" aria-labelledby="importAPIModal" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title" id="importCategoriesModalLabel">%!PREVIEWSTAGING!%</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <form method="post">
+
+                    <div class="mb-3 previewTableToolBar">
+                        <button type="submit" class="btn btn-primary me-2 confirm-btn" name="importAPIBtn"
+                            data-confirm="Biztosan importálni szeretnél?\nEz a művelet nem visszavonható!\nTöbb percig is eltarthat, ezalatt ne hagyd el az oldalt!">%!IMPORT!%</button>
+                        <button type="submit" class="btn btn-danger me-2 confirm-btn" name="deleteStagingBtn"
+                            data-confirm="Biztosan törölni szeretnéd a kijelölt elemeket?\nEz a művelet nem visszavonható!">%!DELETESTAGING!%</button>
+                        <button type="submit" class="btn btn-success me-2 confirm-btn" name="saveStagingBtn"
+                            data-confirm="Biztosan menteni szeretnéd a kijelölt elemeket?\nEz a művelet nem visszavonható!">%!SAVETODB!%</button>
+                        <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">%!CLOSE!%</button>
+                    </div>
+
+                    <p class="errorMessage">%!IMPORTRESULT!%</p>
+                    <table class="table table-striped table-hover table-bordered align-middle previewTable"
+                        id="importPreviewTable">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>%!ID!%</th>
+                                <th>%!CATEGORYNAME!%</th>
+                                <th>%!STATUS!%</th>
+                                <th>%!ACTIONS!%
+                                    <input id="check-all" type="checkbox" class="check-all" data-target-name="recordIDS[]">
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            %!FETCHEDDATA!%
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

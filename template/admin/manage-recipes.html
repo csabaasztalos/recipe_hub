@@ -1,0 +1,82 @@
+
+    <div class="container mt-1">
+        <div id="actionRow">
+        <h1 class="h4 mb-3">%!TITLE!%</h1>
+        </div>
+
+        <div class="card" id="mainTable">
+            <div class="card-body">
+                <form class="row align-items-end mb-3" id="filterForm" method="get" autocomplete="off">
+                    <input type="hidden" name="p" value="manage-recipes">
+                    <div class="col-auto">
+                        <label for="statusFilter" class="form-label mb-0">%!FILTERSTATUS!%</label>
+                        <select class="form-select form-select-sm" name="status" id="statusFilter">
+                            <option value="">%!ALLOPTIONS!%</option>
+                            %!STATUSOPTIONS!%
+                        </select>
+                    </div>
+
+                    <div class="col-auto">
+                        <label for="categoryFilter" class="form-label mb-0">%!FILTERCATEGORY!%</label>
+                        <select class="form-select form-select-sm" name="category" id="categoryFilter">
+                            <option value="">%!ALLOPTIONS!%</option>
+                            %!CATEGORYOPTIONS!%
+                        </select>
+                    </div>
+
+                    <div class="col-auto">
+                        <label for="dateFrom" class="form-label mb-0">%!FILTERFROMDATE!%</label>
+                        <input type="date" class="form-control form-control-sm" name="date_from" id="dateFrom"
+                            value="%!DATEFROM!%">
+                    </div>
+                    <div class="col-auto">
+                        <label for="dateTo" class="form-label mb-0">%!FILTERTODATE!%</label>
+                        <input type="date" class="form-control form-control-sm" name="date_to" id="dateTo"
+                            value="%!DATETO!%">
+                    </div>
+
+                    <div class="col">
+                        <label for="searchBar" class="form-label mb-0">%!FILTERSEARCH!%</label>
+                        <input type="text" class="form-control form-control-sm" name="search" id="searchBar"
+                            placeholder="Cím vagy felhasználó..." value="%!SEARCH!%">
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-sm btn-primary w-100"
+                            name="filter">%!FILTERBUTTON!%</button>
+                    </div>
+                    <div class="col-auto">
+                        <a href="index.php?p=manage-recipes" class="btn btn-sm btn-secondary w-100">%!RESETFILTER!%</a>
+                    </div>
+                </form>
+
+                <div class="card desktopTable">
+                    <div class="table-scroll-container">
+                        <table class="table table-striped mb-0 table-hover" id="recipesTable">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>%!ID!%</th>
+                                    <th>%!TABLETITLE!%</th>
+                                    <th>%!USERID!%</th>
+                                    <th>%!UPLOADEDAT!%</th>
+                                    <th>%!STATUS!%</th>
+                                    <th class="text-center">%!ACTIONS!%</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recipeTableBody">
+                                %!RECIPELIST!%
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="mobileTable">
+                    <div class="tableCards">
+                        %!MOBILERECIPELIST!%
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+%!EDITRECIPEMODAL!%
+%!ERRORMODAL!%
