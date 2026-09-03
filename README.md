@@ -17,7 +17,7 @@ Egy PHP és MYSQL alapú recept gyűjtő/kezelő oldal.
 ## Technológiák
 - PHP - 8.3
 - MySQL
-- Bootstrap
+- HTMl, Bootstrap és CSS
 - JavaScript
 - Composer
 - PHP MAILER
