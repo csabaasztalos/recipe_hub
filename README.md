@@ -5,14 +5,17 @@ Egy PHP és MYSQL alapú recept gyűjtő/kezelő oldal.
 -  Összes jóváhagyott recept megtekintése
 - Felhasználói regisztráció, e-mailes megerősítés, elfelejtett jelszó és bejelentkezés
   
-- Bejelentkezett felhasználók
+### Bejelentkezett felhasználók
   - Receptek feltöltése
   - Receptek mentése, kedvelése
   - Feltöltött receptek módosítás 
   - Profil adatok szerkesztése
   
-- Adminisztrátor
-  - Receptek, Kategóriák, Hozzávalók, Felhasználók teljes CRUD
+### Adminisztrátor
+  - Receptek teljes CRUD
+  - Kategóriák teljes CRUD
+  - Hozzávalók teljes CRUD
+  - Felhasználók teljes CRUD
 
 ## Technológiák
 - PHP - 8.3
